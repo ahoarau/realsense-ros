@@ -4,10 +4,11 @@ services:
 
 env:
   global:
-    - ADDITIONAL_DEBS='software-properties-common wget'
+    - ADDITIONAL_DEBS='libusb-1.0.0-dev'
     - BEFORE_SCRIPT='sh .ci/install-dependencies.sh'
     - AFTER_SCRIPT='sh .ci/run-tests.sh'
     - NOT_TEST_BUILD=true
+    - CMAKE_ARGS='-DBUILD_EXAMPLES=OFF -DBUILD_GRAPHICAL_EXAMPLES=OFF'
   matrix:
     - ROS_DISTRO="kinetic"
     - ROS_DISTRO="melodic"
