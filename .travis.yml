@@ -4,8 +4,8 @@ services:
 
 env:
   global:
-    - BEFORE_SCRIPT='./install-dependencies.sh'
-    - AFTER_SCRIPT='./run-tests.sh'
+    - BEFORE_SCRIPT='sh .ci/install-dependencies.sh'
+    - AFTER_SCRIPT='sh .ci/run-tests.sh'
     - NOT_TEST_BUILD=true
   matrix:
     - ROS_DISTRO="kinetic"
