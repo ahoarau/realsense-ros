@@ -4,3 +4,5 @@ apt-key adv --keyserver keys.gnupg.net --recv-key C8B3A55A6F3EFCDE || sudo apt-k
 apt-get update -qq
 apt-get install librealsense2-dkms --allow-unauthenticated -y
 apt-get install librealsense2-dev --allow-unauthenticated -y
+cd $CATKIN_WORKSPACE/src
+git clone https://github.com/IntelRealSense/librealsense --depth 1
