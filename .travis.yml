@@ -6,6 +6,7 @@ env:
   global:
     - BEFORE_SCRIPT='./install-dependencies.sh'
     - AFTER_SCRIPT='./run-tests.sh'
+    - NOT_TEST_BUILD=true
   matrix:
     - ROS_DISTRO="kinetic"
     - ROS_DISTRO="melodic"
