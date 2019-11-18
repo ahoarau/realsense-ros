@@ -4,6 +4,7 @@ services:
 
 env:
   global:
+    - ADDITIONAL_DEBS='software-properties-common wget'
     - BEFORE_SCRIPT='sh .ci/install-dependencies.sh'
     - AFTER_SCRIPT='sh .ci/run-tests.sh'
     - NOT_TEST_BUILD=true
